@@ -1,0 +1,10 @@
+<apex:component controller="RetreiveRelatedFiles">
+    Related Files<br/>
+    <apex:pageBlock >
+        <apex:pageBlockTable value="{!cdl}" var="c">
+            <apex:column headerValue="Links to Files">
+                <apex:outputLink value="/sfc/servlet.shepherd/version/download/{!c.ContentDocument.LatestPublishedVersionId}" target="_document">{!c.ContentDocument.title}</apex:outputLink>
+            </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:component>
